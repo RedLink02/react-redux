@@ -7,14 +7,14 @@ export function addArticleAction(newArticle){
 
 export function updateArticleAction(newArticle){
     return({
-        type:"MODIFER_ARTICLE",
+        type:"MODIFIER_ARTICLE",
         payload:newArticle
     })
 }
 
 export function deleteArticleAction(articleID){
     return({
-        type:"SUPPRMIER_ARTICLE",
+        type:"SUPPRIMER_ARTICLE",
         payload:articleID
     })
 }

@@ -12,11 +12,11 @@ const initialState =
 function articleReducer(state=initialState, action){
     switch(action.type){
         case "AJOUTER_ARTICLE":
-            return {...state, article:[...state.articles, action.payload]}
-        case "SUPPRMIER_ARTICLE":
-            return {...state, article:state.articles.filter(article => article.id !== action.payload)}
+            return {...state, articles:[...state.articles, action.payload]}
+        case "SUPPRIMER_ARTICLE":
+            return {...state, articles:state.articles.filter(article => article.id !== action.payload)}
         case "MODIFIER_ARTICLE":
-            return {...state, article:state.articles.map(article => article.id === action.payload.id ? action.payload : article)}    
+            return {...state, articles:state.articles.map(article => article.id === action.payload.id ? action.payload : article)}    
         default:
             return state
     }
